@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --green: #a3b055;
+  --textColor: #323a2d;
+  --lightGreen: #f6f7ed;
+  --lightText: #999d96;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-textColor: var(--textColor);
+  --color-lightGreen: var(--lightGreen);
+  --color-lightText: var(--lightText);
+
+  /* Font Size */
+  --text-font10: 10px;
+  --text-font11: 11px;
+  --text-font12: 12px;
+  --text-font17: 17px;
+}
+
+* {
+  font-family: "Tomorrow", sans-serif;
+}
