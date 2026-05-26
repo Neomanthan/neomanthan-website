@@ -3,6 +3,8 @@ import serviceBanner from "@/img/servicesIcon/services-banner.jpg";
 import Image from "next/image";
 import Forward from "../component/Forward";
 import { useState } from "react";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { RxCross2 } from "react-icons/rx";
 
 const services = [
   "AEPS",
@@ -12,24 +14,79 @@ const services = [
   "EMI Collection",
   "CMS",
 ];
+
 const ServicesPage = () => {
   const [active, setActive] = useState(0);
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <>
       <div className="bg-whiteColor w-full py-6 md:py-10">
         <div className="container lg:max-w-280 xl:max-w-305 2xl:max-w-screen-2xl relative px-4 mx-auto">
           <div className="grid grid-cols-12 gap-x-3">
+            {/* LEFT SIDE */}
             <div className="col-span-full xl:col-span-3">
               <div className="w-full">
                 <h2 className="text-green font-bold capitalize text-font27 leading-9.25 md:text-[35px] md:leading-11.25 mb-2 w-full">
                   Our Services
                 </h2>
+
                 <p className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-5">
                   We provide secure, fast, and reliable digital payment and
                   financial solutions designed to help retailers and service
                   partners offer convenient banking and payment services to
                   customers.
                 </p>
+
+                {/* MOBILE BUTTON */}
+                <div className="xl:hidden mb-5">
+                  <button
+                    onClick={() => setOpenMenu(!openMenu)}
+                    className="w-full flex items-center justify-between bg-green text-whiteColor px-4 py-3 rounded-xl"
+                  >
+                    <span className="font-medium">{services[active]}</span>
+
+                    {openMenu ? (
+                      <RxCross2 className="size-5" />
+                    ) : (
+                      <HiOutlineMenuAlt3 className="size-5" />
+                    )}
+                  </button>
+
+                  {/* MOBILE DROPDOWN */}
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      openMenu
+                        ? "max-h-[500px] opacity-100 mt-3"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="bg-whiteColor border border-borderColor rounded-2xl p-3 shadow-sm">
+                      {services.map((item, index) => {
+                        const isActive = active === index;
+
+                        return (
+                          <button
+                            key={index}
+                            onClick={() => {
+                              setActive(index);
+                              setOpenMenu(false);
+                            }}
+                            className={`w-full text-left px-4 py-3 rounded-xl mb-2 last:mb-0 transition-all duration-300 ${
+                              isActive
+                                ? "bg-green text-whiteColor"
+                                : "bg-gray-50 text-textColor hover:bg-green/10"
+                            }`}
+                          >
+                            {item}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+
+                {/* DESKTOP SIDEBAR */}
                 <div className="w-full hidden xl:block">
                   {services.map((item, index) => {
                     const isActive = active === index;
@@ -48,14 +105,16 @@ const ServicesPage = () => {
                                 : "bg-lightText border-lightText"
                             }`}
                           />
+
                           {index !== services.length - 1 && (
                             <div className="w-0.5 h-8 bg-lightText" />
                           )}
                         </div>
-                        <div className="pt-[-2px]">
+
+                        <div>
                           <div
-                            className={`px-2 ${
-                              isActive ? " text-green" : " text-lightText"
+                            className={`px-2 transition-all duration-300 ${
+                              isActive ? "text-green" : "text-lightText"
                             }`}
                           >
                             <h3 className="text-font17 font-medium">{item}</h3>
@@ -67,6 +126,8 @@ const ServicesPage = () => {
                 </div>
               </div>
             </div>
+
+            {/* RIGHT SIDE */}
             <div className="col-span-full xl:col-span-9">
               <div className="w-full mb-5">
                 <Image
@@ -74,18 +135,21 @@ const ServicesPage = () => {
                   width={0}
                   height={0}
                   alt="Services"
-                  className="rounded-[20px]"
+                  className="rounded-[20px] w-full h-auto"
                 />
               </div>
+
               <div className="w-full">
                 <h2 className="text-green font-bold capitalize text-font27 leading-9.25 md:text-font40 md:leading-12.5 mb-1 w-full">
-                  AEPS
+                  {services[active]}
                 </h2>
+
                 <p className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-5">
                   Manage all your bill payments in one place. Electricity,
                   water, gas, mobile, and more paid instantly with complete
                   security.
                 </p>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   {[
                     {
@@ -142,6 +206,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </div>
+
       <Forward />
     </>
   );
