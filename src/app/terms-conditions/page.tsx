@@ -1,4 +1,5 @@
 "use client";
+import SubscribeSection from "../component/SubscribeSection";
 
 const TermsConditionPage = () => {
   return (
@@ -153,9 +154,92 @@ const TermsConditionPage = () => {
               NeoManthan shall not be responsible for transaction failures due
               to:
             </p>
+            <div className="w-full">
+              <ul className="list-disc pl-5">
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-1">
+                  Incorrect or incomplete information provided by users
+                </li>
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-1">
+                  Insufficient account balance
+                </li>
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-1">
+                  Rejection by banks, financial institutions, or service
+                  providers
+                </li>
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-1">
+                  Technical issues, server downtime, or network failures
+                </li>
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-1">
+                  Delays caused by third-party providers
+                </li>
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-3">
+                  Any circumstances beyond the control of NeoManthan
+                </li>
+              </ul>
+              <p className="text-textColor text-font16 font-normal text-start leading-6.5 w-full mb-2">
+                However, NeoManthan will make reasonable efforts to notify users
+                regarding failed or unsuccessful transactions wherever
+                applicable.
+              </p>
+            </div>
+          </div>
+          <div className="w-full mb-4">
+            <h3 className="text-textColor text-font20 leading-8 font-semibold capitalize mb-1">
+              User Responsibilities
+            </h3>
+            <p className="text-textColor text-font16 font-normal text-start leading-6.5 w-full mb-2">
+              Incorrect or incomplete information provided by users
+            </p>
+
+            <div className="w-full">
+              <ul className="list-disc pl-5">
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-1">
+                  To provide accurate and genuine information
+                </li>
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-1">
+                  Not to use the platform for unlawful or fraudulent activities
+                </li>
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-1">
+                  To comply with all applicable laws and regulations
+                </li>
+                <li className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-3">
+                  To maintain confidentiality of account credentials and
+                  transaction details
+                </li>
+              </ul>
+              <p className="text-textColor text-font16 font-normal text-start leading-6.5 w-full">
+                NeoManthan reserves the right to suspend access to users found
+                violating these terms.
+              </p>
+            </div>
+          </div>
+          <div className="w-full mb-4">
+            <h3 className="text-textColor text-font20 leading-8 font-semibold capitalize mb-1">
+              Limitation of Liability
+            </h3>
+            <p className="text-textColor text-font16 font-normal text-start leading-6.5 w-full mb-2">
+              NeoManthan shall not be liable for any direct, indirect,
+              incidental, or consequential damages arising from the use or
+              inability to use the services provided on the platform.
+            </p>
+            <p className="text-textColor text-font16 font-normal text-start leading-6.5 w-full mb-2">
+              All services are provided on an “as available” and “as applicable”
+              basis subject to third-party service provider availability.
+            </p>
+          </div>
+          <div className="w-full">
+            <h3 className="text-textColor text-font20 leading-8 font-semibold capitalize mb-1">
+              Contact Us
+            </h3>
+            <p className="text-textColor text-font16 font-normal text-start leading-6.5 w-full">
+              For any support, queries, or complaints, users may contact
+              NeoManthan customer support through the official website or
+              registered support channels.
+            </p>
           </div>
         </div>
       </div>
+      <SubscribeSection />
     </>
   );
 };

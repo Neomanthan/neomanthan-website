@@ -98,10 +98,10 @@ const Footer = () => {
                     <Link href="#">Contact Us</Link>
                   </li>
                   <li className="text-textColor hover:pl-2 text-font16 font-normal capitalize mb-2 cursor-pointer hover:text-green transition-all duration-300 ease-in">
-                    <Link href="#">About Us</Link>
+                    <Link href="/about">About Us</Link>
                   </li>
                   <li className="text-textColor hover:pl-2 text-font16 font-normal capitalize mb-2 cursor-pointer hover:text-green transition-all duration-300 ease-in">
-                    <Link href="#">FAQ</Link>
+                    <Link href="/faq">FAQ</Link>
                   </li>
                 </ul>
               </div>
@@ -145,7 +145,7 @@ const Footer = () => {
         </div>
         <div className="w-full pt-3 border-t border-borderColor mt-2 md:mt-4">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-1">
-            <div className="w-full flex flex-wrap items-center justify-center xl:justify-start gap-3 text-textColor font-medium uppercase text-font14 2xl:text-font15 tracking-wide">
+            <div className="w-full flex flex-wrap items-center justify-center xl:justify-start gap-3 text-textColor font-medium uppercase text-font14 tracking-wide">
               <span
                 className="cursor-pointer hover:text-green transition-colors"
                 onClick={() => router.push("/privacy-policy")}
