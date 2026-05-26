@@ -32,29 +32,11 @@ const AboutPage = () => {
                   solutions, but also on building long-term relationships based
                   on trust, innovation, and excellence.
                 </p>
-                <div className="w-full md:mb-5 lg:mb-0">
-                  <h2 className="text-green font-bold capitalize text-font27 leading-9.25 md:text-font40 md:leading-12.5 lg:text-font45 lg:leading-13.75 mb-2 max-w-170 w-full">
-                    Our Vision
-                  </h2>
-                  <p className="text-textColor text-font17 font-normal text-start leading-6.75 max-w-170 w-full mb-5">
-                    Our vision is to become a trusted leader in technology and
-                    digital innovation by creating impactful solutions that
-                    shape the future of businesses and communities.
-                  </p>
-                  <p className="text-textColor text-font17 font-normal text-start leading-6.75 max-w-170 w-full mb-5">
-                    NeoManthan Systems envisions a digitally empowered ecosystem
-                    where technology bridges opportunities, accelerates growth,
-                    and enables organizations to thrive with confidence in a
-                    connected world.
-                  </p>
-                </div>
               </div>
-            </div>
-            </div>
-            </div>
-
-            <div className="w-full">
-              <Image src={aboutImg} width={0} height={0} alt="about" />
+              <div className="w-full md:mb-5 lg:mb-0"></div>
+              <div className="w-full">
+                <Image src={aboutImg} width={0} height={0} alt="about" />
+              </div>
             </div>
           </div>
         </div>
