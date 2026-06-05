@@ -27,7 +27,7 @@ const ContactInfo = () => {
                       Contact Number
                     </p>
                     <h3 className="text-textColor text-font15 md:text-font17 font-semibold leading-6.75">
-                      +91-812 816 8787
+                      +91-8866558898
                     </h3>
                   </div>
                 </div>
@@ -56,8 +56,8 @@ const ContactInfo = () => {
                     Location
                   </p>
                   <h3 className="text-textColor text-font15 md:text-font17 font-semibold leading-6.75">
-                    Shop No - 13 Snehmudra Soc, Kapodra Varachha Road, Surat
-                    Gujarat India 395006
+                    Shop No. S-15, Sai Ashish Trade Centre, Nr. Second VIP Road,
+                    Vesu, Surat - 395007
                   </h3>
                 </div>
               </div>
