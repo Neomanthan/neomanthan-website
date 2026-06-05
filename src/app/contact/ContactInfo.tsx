@@ -27,7 +27,7 @@ const ContactInfo = () => {
                       Contact Number
                     </p>
                     <h3 className="text-textColor text-font15 md:text-font17 font-semibold leading-6.75">
-                      +91-8866558898
+                      +91-88 66 55 88 98
                     </h3>
                   </div>
                 </div>
