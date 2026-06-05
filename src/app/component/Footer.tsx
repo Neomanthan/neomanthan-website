@@ -68,22 +68,22 @@ const Footer = () => {
                 </h4>
                 <ul className="m-0 p-0">
                   <li className="text-textColor hover:pl-2 text-font16 font-normal capitalize mb-2 cursor-pointer hover:text-green transition-all duration-300 ease-in">
-                    <Link href="#">AEPS</Link>
+                    <Link href="/services">AEPS</Link>
                   </li>
                   <li className="text-textColor hover:pl-2 text-font16 font-normal capitalize mb-2 cursor-pointer hover:text-green transition-all duration-300 ease-in">
-                    <Link href="#">M-ATM</Link>
+                    <Link href="/services">M-ATM</Link>
                   </li>
                   <li className="text-textColor hover:pl-2 text-font16 font-normal capitalize mb-2 cursor-pointer hover:text-green transition-all duration-300 ease-in">
-                    <Link href="#">BBPS</Link>
+                    <Link href="/services">BBPS</Link>
                   </li>
                   <li className="text-textColor hover:pl-2 text-font16 font-normal capitalize mb-2 cursor-pointer hover:text-green transition-all duration-300 ease-in">
-                    <Link href="#">Mobile & DTH Recharge</Link>
+                    <Link href="/services">Mobile & DTH Recharge</Link>
                   </li>
                   <li className="text-textColor hover:pl-2 text-font16 font-normal capitalize mb-2 cursor-pointer hover:text-green transition-all duration-300 ease-in">
-                    <Link href="#">EMI Collection</Link>
+                    <Link href="/services">EMI Collection</Link>
                   </li>
                   <li className="text-textColor hover:pl-2 text-font16 font-normal capitalize mb-2 cursor-pointer hover:text-green transition-all duration-300 ease-in">
-                    <Link href="#">CMS</Link>
+                    <Link href="/services">CMS</Link>
                   </li>
                 </ul>
               </div>
@@ -114,10 +114,10 @@ const Footer = () => {
                 <div className="flex items-center gap-x-4 mb-3.5">
                   <FaPhone className="text-green size-5" />
                   <Link
-                    href={"tel:+918128168787"}
+                    href={"tel:+918866558898"}
                     className="text-textColor text-font16 font-normal hover:text-green transition-all duration-400 ease-in-out"
                   >
-                    +91-812 816 8787
+                    +91-8866558898
                   </Link>
                 </div>
                 <div className="flex items-center gap-x-4 mb-3.5">
@@ -135,8 +135,8 @@ const Footer = () => {
                   </div>
 
                   <p className="text-textColor text-font16 leading-6.5 font-normal">
-                    Shop No - 13 Snehmudra Soc, Kapodra Varachha Road, Surat
-                    Gujarat India 395006
+                    Shop No. S-15, Sai Ashish Trade Centre, Nr. Second VIP Road,
+                    Vesu, Surat - 395007
                   </p>
                 </div>
               </div>

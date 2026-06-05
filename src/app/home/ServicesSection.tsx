@@ -6,6 +6,7 @@ import serviceImg3 from "@/img/servicesIcon/services-3.png";
 import serviceImg4 from "@/img/servicesIcon/services-4.png";
 import serviceImg5 from "@/img/servicesIcon/services-5.png";
 import serviceImg6 from "@/img/servicesIcon/services-6.png";
+import serviceImg7 from "@/img/servicesIcon/services-7.png";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,17 +15,20 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const ServicesMultiple = [
-  { img: serviceImg1, label: "Top Up" },
-  { img: serviceImg2, label: "Electricity" },
-  { img: serviceImg3, label: "Bill Payment" },
-  { img: serviceImg4, label: "Loan" },
-  { img: serviceImg5, label: "Recharge" },
-  { img: serviceImg6, label: "DTH" },
-  { img: serviceImg1, label: "Top Up" },
-  { img: serviceImg2, label: "Electricity" },
-  { img: serviceImg3, label: "Bill Payment" },
-  { img: serviceImg4, label: "Loan" },
-  { img: serviceImg5, label: "Recharge" },
+  { img: serviceImg1, label: "AEPS" },
+  { img: serviceImg2, label: "BBPS" },
+  { img: serviceImg3, label: "M - ATM" },
+  { img: serviceImg4, label: "UPI - ATM" },
+  { img: serviceImg5, label: "Mobile & DTH Recharge" },
+  { img: serviceImg6, label: "CMS - EMI Collection" },
+  { img: serviceImg7, label: "Electricity" },
+  { img: serviceImg1, label: "AEPS" },
+  { img: serviceImg2, label: "BBPS" },
+  { img: serviceImg3, label: "M - ATM" },
+  { img: serviceImg4, label: "UPI - ATM" },
+  { img: serviceImg5, label: "Mobile & DTH Recharge" },
+  { img: serviceImg6, label: "CMS - EMI Collection" },
+  { img: serviceImg7, label: "Electricity" },
 ];
 const ServicesSection = () => {
   return (

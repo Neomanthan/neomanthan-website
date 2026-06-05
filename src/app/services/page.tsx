@@ -5,246 +5,43 @@ import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import Forward from "../component/Forward";
+import AepsContent from "./AepsContent";
+import Bbps from "./Bbps";
+import CmsContent from "./CmsContent";
+import QRAtm from "./QRAtm";
+import Recharge from "./Recharge";
+import MiniAtm from "./MiniAtm";
 
 const servicesData = [
   {
-    title: "AEPS",
+    title: "Aadhaar Banking - AEPS",
     image: serviceBanner,
-    description:
-      "AEPS allows customers to perform banking transactions using Aadhaar authentication securely and instantly.",
-
-    features: [
-      {
-        id: "1.",
-        title: "Cash Withdrawal",
-        desc: "Customers can withdraw cash using Aadhaar number and biometric authentication.",
-      },
-      {
-        id: "2.",
-        title: "Balance Inquiry",
-        desc: "Check account balance instantly without visiting the bank branch.",
-      },
-      {
-        id: "3.",
-        title: "Mini Statement",
-        desc: "Get recent transaction details quickly and securely.",
-      },
-      {
-        id: "4.",
-        title: "Easy Access",
-        desc: "Banking services available in rural and remote areas.",
-      },
-      {
-        id: "5.",
-        title: "Secure Transactions",
-        desc: "Biometric authentication ensures secure banking.",
-      },
-      {
-        id: "6.",
-        title: "Interoperable Banking",
-        desc: "Works with multiple banks across India.",
-      },
-    ],
+    content: <AepsContent />,
   },
-
   {
-    title: "M-ATM Services",
+    title: "Mini-ATM",
     image: serviceBanner,
-    description:
-      "Provide debit card-based banking services anytime through Micro ATM devices.",
-
-    features: [
-      {
-        id: "1.",
-        title: "Cash Withdrawal",
-        desc: "Withdraw cash securely using debit cards.",
-      },
-      {
-        id: "2.",
-        title: "Balance Check",
-        desc: "Check bank balance instantly through Micro ATM.",
-      },
-      {
-        id: "3.",
-        title: "Portable Device",
-        desc: "Easy-to-carry banking solution for retailers.",
-      },
-      {
-        id: "4.",
-        title: "Secure PIN Verification",
-        desc: "Transactions protected with PIN authentication.",
-      },
-      {
-        id: "5.",
-        title: "Rural Banking Support",
-        desc: "Makes banking accessible in underserved areas.",
-      },
-      {
-        id: "6.",
-        title: "Instant Receipt",
-        desc: "Customers receive transaction confirmation immediately.",
-      },
-    ],
+    content: <MiniAtm />,
   },
-
   {
-    title: "BBPS",
+    title: "QR-ATM",
     image: serviceBanner,
-    description:
-      "Manage all your bill payments in one place with complete security and convenience.",
-
-    features: [
-      {
-        id: "1.",
-        title: "One-Stop Platform",
-        desc: "Pay electricity, gas, water, DTH, recharge, insurance, and more.",
-      },
-      {
-        id: "2.",
-        title: "Anytime Access",
-        desc: "Available through apps, websites, wallets, and agent outlets.",
-      },
-      {
-        id: "3.",
-        title: "Secure And Reliable",
-        desc: "Safe and standardized platform with instant confirmation.",
-      },
-      {
-        id: "4.",
-        title: "Interoperability",
-        desc: "Pay any bill through any BBPS-enabled platform.",
-      },
-      {
-        id: "5.",
-        title: "Instant Confirmation",
-        desc: "Get payment receipt instantly after transaction.",
-      },
-      {
-        id: "6.",
-        title: "Multiple Payment Modes",
-        desc: "Supports UPI, cards, wallets, net banking, and cash.",
-      },
-    ],
+    content: <QRAtm />,
   },
-
+  {
+    title: "Utility Payments - BBPS",
+    image: serviceBanner,
+    content: <Bbps />,
+  },
   {
     title: "Mobile & DTH Recharge",
     image: serviceBanner,
-    description:
-      "Fast and secure recharge services for prepaid mobile and DTH connections.",
-
-    features: [
-      {
-        id: "1.",
-        title: "Instant Recharge",
-        desc: "Recharge completed within seconds.",
-      },
-      {
-        id: "2.",
-        title: "All Operators Supported",
-        desc: "Supports major telecom and DTH providers.",
-      },
-      {
-        id: "3.",
-        title: "24/7 Availability",
-        desc: "Recharge anytime without restrictions.",
-      },
-      {
-        id: "4.",
-        title: "Secure Payments",
-        desc: "Safe and reliable payment gateway.",
-      },
-      {
-        id: "5.",
-        title: "Easy Interface",
-        desc: "Simple recharge flow for retailers and users.",
-      },
-      {
-        id: "6.",
-        title: "Quick Confirmation",
-        desc: "Instant recharge success notification.",
-      },
-    ],
+    content: <Recharge />,
   },
-
   {
-    title: "EMI Collection",
+    title: "CMS - EMI Collection",
     image: serviceBanner,
-    description:
-      "Enable customers to pay their loan EMIs quickly and securely.",
-
-    features: [
-      {
-        id: "1.",
-        title: "Multiple Loan Providers",
-        desc: "Supports EMI payments for various banks and NBFCs.",
-      },
-      {
-        id: "2.",
-        title: "Instant Processing",
-        desc: "EMI payments processed in real-time.",
-      },
-      {
-        id: "3.",
-        title: "Secure Transactions",
-        desc: "Reliable and safe payment infrastructure.",
-      },
-      {
-        id: "4.",
-        title: "Receipt Generation",
-        desc: "Instant payment confirmation receipt.",
-      },
-      {
-        id: "5.",
-        title: "Easy Payment Modes",
-        desc: "Pay using UPI, cards, cash, or wallets.",
-      },
-      {
-        id: "6.",
-        title: "Convenient Service",
-        desc: "Simple EMI collection for retailers and customers.",
-      },
-    ],
-  },
-
-  {
-    title: "CMS",
-    image: serviceBanner,
-    description:
-      "Cash Management Services designed for efficient collection and settlement.",
-
-    features: [
-      {
-        id: "1.",
-        title: "Fast Collection",
-        desc: "Quick and efficient cash collection process.",
-      },
-      {
-        id: "2.",
-        title: "Real-Time Tracking",
-        desc: "Track collections and settlements instantly.",
-      },
-      {
-        id: "3.",
-        title: "Secure Handling",
-        desc: "Ensures safe cash management operations.",
-      },
-      {
-        id: "4.",
-        title: "Automated Reports",
-        desc: "Generate detailed collection reports easily.",
-      },
-      {
-        id: "5.",
-        title: "Business Support",
-        desc: "Suitable for retailers and enterprises.",
-      },
-      {
-        id: "6.",
-        title: "Reliable Network",
-        desc: "Wide service availability across locations.",
-      },
-    ],
+    content: <CmsContent />,
   },
 ];
 
@@ -324,7 +121,6 @@ const ServicesPage = () => {
                 <div className="w-full hidden xl:block">
                   {servicesData.map((item, index) => {
                     const isActive = active === index;
-
                     return (
                       <div
                         key={index}
@@ -344,7 +140,6 @@ const ServicesPage = () => {
                             <div className="w-0.5 h-8 bg-lightText" />
                           )}
                         </div>
-
                         <div>
                           <div
                             className={`px-2 transition-all duration-300 ${
@@ -364,44 +159,22 @@ const ServicesPage = () => {
             </div>
 
             <div className="col-span-full xl:col-span-9">
-              <div className="w-full mb-5">
-                <Image
-                  src={servicesData[active].image}
-                  width={0}
-                  height={0}
-                  alt={servicesData[active].title}
-                  className="rounded-[20px] w-full h-auto"
-                />
-              </div>
-
               <div className="w-full">
-                <h2 className="text-green font-bold capitalize text-font27 leading-9.25 md:text-font30 md:leading-10 mb-1 w-full">
-                  {servicesData[active].title}
-                </h2>
+                <div className="w-full mb-5">
+                  <Image
+                    src={serviceBanner}
+                    width={0}
+                    height={0}
+                    alt={servicesData[active].title}
+                    className="rounded-[20px] w-full h-auto"
+                  />
+                </div>
 
-                <p className="text-textColor text-font16 font-normal text-start leading-6.75 w-full mb-5">
-                  {servicesData[active].description}
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  {servicesData[active].features.map((item) => (
-                    <div
-                      key={item.id}
-                      className="bg-whiteColor border border-borderColor rounded-[20px] p-5 shadow-sm transition-all duration-300"
-                    >
-                      <h2 className="text-green text-font30 font-bold leading-none mb-4">
-                        {item.id}
-                      </h2>
-
-                      <h3 className="text-textColor text-[22px] font-semibold leading-tight mb-3">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-lightText text-font16 leading-7 font-normal">
-                        {item.desc}
-                      </p>
-                    </div>
-                  ))}
+                <div className="w-full">
+                  <h2 className="text-green font-bold capitalize text-font27 leading-9.25 md:text-font30 md:leading-10 mb-3 w-full">
+                    {servicesData[active].title}
+                  </h2>
+                  <div className="w-full">{servicesData[active].content}</div>
                 </div>
               </div>
             </div>

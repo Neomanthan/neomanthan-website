@@ -1,19 +1,22 @@
 "use client";
-import logo from "@/img/logo.svg";
+import partner1 from "@/img/partners/partner-1.png";
+import partner2 from "@/img/partners/partner-2.png";
+import partner3 from "@/img/partners/partner-3.png";
+import partner4 from "@/img/partners/partner-4.svg";
 import Image from "next/image";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const ServicesMultiple = [
-  { img: logo },
-  { img: logo },
-  { img: logo },
-  { img: logo },
-  { img: logo },
-  { img: logo },
-  { img: logo },
-  { img: logo },
+  { img: partner1 },
+  { img: partner2 },
+  { img: partner3 },
+  { img: partner4 },
+  { img: partner1 },
+  { img: partner2 },
+  { img: partner3 },
+  { img: partner4 },
 ];
 
 const PartnerSection = () => {
